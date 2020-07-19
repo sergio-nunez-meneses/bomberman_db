@@ -1,0 +1,142 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: helvetica, sans-serif;
+  font-size: 1rem;
+}
+canvas {
+  width: 100%;
+  height: auto;
+}
+table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+}
+table th,
+table td {
+  border: 1px solid #000;
+}
+.title {
+  text-align: center;
+}
+.playmode-btn {
+  width: 100%;
+}
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+}
+.playmode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+}
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leaderboard-container {
+  width: 100%;
+}
+.game-container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+}
+.information-container {
+  margin: 0 auto;
+}
+.canvas-container {
+  width: 760px;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border: 1rem solid grey;
+  display: flex;
+}
+.game-won {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: yellow;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  overflow-y: scroll;
+}
+.game-over {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: red;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  overflow-y: scroll;
+}
+.player {
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  display: inline-block;
+}
+.enemies {
+  width: 20px;
+  height: 20px;
+  background: red;
+  display: inline-block;
+}
+.walls {
+  width: 20px;
+  height: 20px;
+  background: darkgrey;
+  display: inline-block;
+}
+.bomb {
+  width: 20px;
+  height: 20px;
+  background: pink;
+  display: inline-block;
+}
+.bomb-up {
+  width: 20px;
+  height: 20px;
+  background: lightblue;
+  display: inline-block;
+}
+.fire {
+  width: 20px;
+  height: 20px;
+  background: blue;
+  display: inline-block;
+}

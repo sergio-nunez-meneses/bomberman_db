@@ -1,0 +1,152 @@
+// out: style.css, sourcemap: true, compress: true;
+// main: style.less;
+
+// @font-size: calc(1rem + 0.5vw);
+@player-color: yellow;
+@enemies-color: red;
+@walls-color: darkgrey;
+@bomb-color: pink;
+@bomb-up-color: lightblue;
+@fire-color: blue;
+
+.square(@color) {
+  width: 20px;
+  height: 20px;
+  background: @color;
+  display: inline-block;
+}
+
+.game-modal(@color) {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  color: @color;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+// @sizes: {
+//   SM: 576px;
+//   MD: 768px;
+//   LG: 992px;
+//   XL: 1200px;
+// }
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: helvetica, sans-serif;
+  font-size: 1rem;
+}
+canvas {
+  width: 100%;
+  height: auto;
+}
+table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+  & th, td {
+    border: 1px solid #000;
+  }
+}
+
+.title {
+  text-align: center;
+}
+.playmode-btn {
+  width: 100%;
+}
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+
+  // @media (max-width: @sizes[XL]) {
+  //   flex-direction: ;
+  // }
+}
+.playmode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+}
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leaderboard-container {
+  width: 100%;
+}
+.game-container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 0.0625rem solid #000;
+
+  // @media (max-width: @sizes[XL]) {
+  //   flex-direction: row;
+  // }
+}
+.information-container {
+  margin: 0 auto;
+}
+.canvas-container {
+  width: 760px;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border: 1rem solid grey;
+  display: flex;
+}
+
+.game-won {
+  .game-modal(@player-color);
+}
+.game-over {
+  .game-modal(@enemies-color);
+}
+
+.player {
+  .square(@player-color);
+}
+.enemies {
+  .square(@enemies-color);
+}
+.walls {
+  .square(@walls-color);
+}
+.bomb {
+  .square(@bomb-color);
+}
+.bomb-up {
+  .square(@bomb-up-color);
+}
+.fire {
+  .square(@fire-color);
+}
