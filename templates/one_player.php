@@ -42,11 +42,6 @@ include '../include/header.php';
       </ul>
     </div>
   </div>
-  <!-- leaderboard -->
-  <div class="">
-
-  </div>
-
   <!-- board game -->
   <div class="canvas-container">
     <canvas id="canvas"></canvas>

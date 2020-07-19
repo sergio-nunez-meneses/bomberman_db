@@ -16,8 +16,6 @@ let walls = [],
   powerUps = [],
   gameOn = true,
   score = 0;
-  // seconds = 0,
-  // minutes = 0;
 
 /* functions */
 minMaxRandom = function(min, max) {
@@ -302,8 +300,6 @@ class ExplodeEnemies extends Block {
         clearCase(enemies[i].x, enemies[i].y);
         enemies.splice(enemies.indexOf(enemies[i]), 1);
         scoreHandler(10);
-        // score++;
-        // document.getElementById("score").innerHTML = score;
         if (enemies.length == 0) {
           youWin(score);
         }
@@ -335,21 +331,6 @@ class YouWin extends Block {
     document.body.appendChild(this.element);
   }
 }
-
-// game timer
-// timeCount = function() {
-//   if (gameOn) {
-//     seconds++;
-//     if (seconds < 10) {
-//       document.getElementById("time").innerHTML = "0" + minutes + ":0" + seconds;
-//     } else {
-//       document.getElementById("time").innerHTML = "0" + minutes + ":" + seconds;
-//     }
-//   } else {
-//     clearInterval(loopTimeCount);
-//   }
-// }
-// let loopTimeCount = setInterval(timeCount, 1000);
 
 // generate walls
 for (let wx = 0; wx < SIZE; wx++) {

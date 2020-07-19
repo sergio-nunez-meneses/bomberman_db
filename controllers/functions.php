@@ -64,7 +64,6 @@ function start_game() {
       $_SESSION['score'] = $player['score'];
     }
 
-
     if (isset($_POST['one_player'])) {
       header('Location:../templates/one_player.php');
     } elseif (isset($_POST['two_players'])) {
@@ -80,6 +79,7 @@ function save_score() {
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])) {
     session_unset();
     session_destroy();
+
     $player = $_POST['nickname'];
     $score = $_POST['score'];
 
@@ -88,6 +88,7 @@ function save_score() {
       'score' => $score,
       'player' => $player
     ]);
+
     header('Location:../index.php');
   } else {
     header('Location:../index.php?error=yes&error_message=failed to save score');
